@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic Regression</title>
+    
+    <!-- Add Bootstrap CDN link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1>Logistic Regression </h1> 
+
+        <div class="mb-4">
+            <h4>Training Accuracy:</h4>
+            <p class="lead">{{ train_accuracy }}</p>
+        </div>
+
+        <div class="mb-4">
+            <h4>Accuracy Percentage:</h4>
+            <p class="lead">{{ perc_accuracy }}</p>
+        </div>
+        
+        <div class="mb-4">
+            <h3>Confusion Matrix</h3>
+            <img src="{{ url_for('static', filename='confusion_matrix.png') }}" alt="Confusion matrix" class="img-fluid">
+        </div>
+
+                
+        <div class="mb-4">
+            <h3>Loan Approval Bar Char</h3>
+            <img src="{{ url_for('static', filename='logistic_barchart.png') }}" alt="Logistic Barchart" class="img-fluid">
+        </div>
+
+        <div class="mb-4">
+            <h3>Roc Curve</h3>
+            <img src="{{ url_for('static', filename='roccurve_logistic.png') }}" alt="Logistic Barchart" class="img-fluid">
+        </div>
+
+
+
+        <!-- <div class="mb-4">
+            <h2>Classification Report</h2>
+            <pre>{{ classification_report }}</pre>
+        </div> -->
+
+
+    </div>
+
+    
+    <!-- Add Bootstrap JS and Popper.js CDN links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
